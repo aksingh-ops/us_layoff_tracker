@@ -1,0 +1,15 @@
+# Downloaded data and results (can be rebuilt by running the script)
+warn_data/
+layoffs_output/
+
+# Secrets - never upload API keys to GitHub
+.env
+
+# Python and Mac clutter
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.ipynb_checkpoints/
+bls_cache/
+.vscode/
