@@ -1,6 +1,6 @@
 # Results
 
-_Last updated November 02, 2026. Generated automatically by `make_charts.py`._
+_Last updated November 05, 2026. Generated automatically by `make_charts.py`._
 
 ### Key numbers
 
@@ -8,19 +8,19 @@ _Last updated November 02, 2026. Generated automatically by `make_charts.py`._
 |---|---|
 | US layoffs & discharges in 2025 (BLS) | **21.24M** |
 | Change vs 2024 | **+6.1%** |
-| 2026 so far (8 months), average per month | **1.69M** |
-| Latest month (August 2026, preliminary) | **1.83M** |
-| WARN notices since 2023 (29 states) | **10,072** notices, **887K** workers |
+| 2026 so far (9 months), average per month | **1.71M** |
+| Latest month (September 2026, preliminary) | **1.77M** |
+| WARN notices since 2023 (29 states) | **10,122** notices, **894K** workers |
 
 ### Findings
 
 - BLS counted **21.24M** layoffs and discharges in 2025, **+6.1%** compared with 2024 (20.01M).
-- Through August 2026, 2026 averages **1.69M a month**, **-4.7%** versus the 2025 monthly average.
+- Through September 2026, 2026 averages **1.71M a month**, **-3.3%** versus the 2025 monthly average.
 - States with the most layoffs and discharges in 2025: **CA** (2.4M), **TX** (1.7M), **NY** (1.5M).
-- Notices of 1,000+ workers were **0.5%** of WARN notices but **12.7%** of the workers named in them.
+- Notices of 1,000+ workers were **0.5%** of WARN notices but **12.8%** of the workers named in them.
 - Largest single WARN notice since 2023: **Tend Exchange Subsidiary LLC and Delaware Tender Staffing
 LLC** (nan, CA), **16,132** workers, May 2025.
-- Trend match with BLS (rank correlation, 1 = same direction every month): unemployment claims **0.32**, WARN **-0.37**.
+- Trend match with BLS (rank correlation, 1 = same direction every month): unemployment claims **0.28**, WARN **-0.34**.
 
 ### Charts
 
@@ -39,7 +39,7 @@ LLC** (nan, CA), **16,132** workers, May 2025.
 | 2023 | 12 | 19.85M | 1.65M |
 | 2024 | 12 | 20.01M | 1.67M |
 | 2025 | 12 | 21.24M | 1.77M |
-| 2026 | 8 | 13.49M | 1.69M |
+| 2026 | 9 | 15.41M | 1.71M |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/sources_trend-dark.png">
@@ -126,11 +126,11 @@ LLC** (nan, CA), **16,132** workers, May 2025.
 | Dallas | TX | 35 | 6,018 |
 | Hillsboro | OR | 25 | 5,845 |
 | Houston | TX | 55 | 5,650 |
-| Portland | OR | 63 | 5,169 |
+| Portland | OR | 65 | 5,242 |
 | San Antonio | TX | 47 | 5,154 |
 | Redmond | WA | 19 | 4,642 |
 | New York | NY | 58 | 4,249 |
-| Fort Worth | TX | 31 | 4,165 |
+| Phoenix | AZ | 46 | 4,221 |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/size_mix-dark.png">
@@ -139,10 +139,10 @@ LLC** (nan, CA), **16,132** workers, May 2025.
 
 | Layoff size | Notices | Share of notices | Workers | Share of workers |
 |---|---|---|---|---|
-| Small (<50) | 4,802 | 50.2% | 78,475 | 8.8% |
-| Medium (50-249) | 4,183 | 43.7% | 453,899 | 51.2% |
-| Large (250-999) | 535 | 5.6% | 242,218 | 27.3% |
-| Mega (1000+) | 45 | 0.5% | 112,381 | 12.7% |
+| Small (<50) | 4,815 | 50.1% | 78,746 | 8.8% |
+| Medium (50-249) | 4,201 | 43.8% | 456,004 | 51.0% |
+| Large (250-999) | 540 | 5.6% | 245,242 | 27.4% |
+| Mega (1000+) | 46 | 0.5% | 113,986 | 12.8% |
 
 ### How to read this
 
