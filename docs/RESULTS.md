@@ -2,6 +2,8 @@
 
 _Last updated November 05, 2026. Generated automatically by `make_charts.py`._
 
+**Data current as of:** BLS JOLTS through **September 2026** · WARN notices through **November 04, 2026** · unemployment claims through **October 2026**
+
 ### Key numbers
 
 | Measure | Value |
@@ -16,10 +18,16 @@ _Last updated November 05, 2026. Generated automatically by `make_charts.py`._
 
 - BLS counted **21.24M** layoffs and discharges in 2025, **+6.1%** compared with 2024 (20.01M).
 - Through September 2026, 2026 averages **1.71M a month**, **-3.3%** versus the 2025 monthly average.
+- Seasonal pattern (full years): **Jan** and **Dec** are usually the highest months (+32% and +15% vs. the yearly average); **Mar** and **Feb** are usually the lowest.
+- Highest month each year: 2023 **Jan** (2.35M), 2024 **Jan** (2.10M), 2025 **Jan** (2.25M), 2026 **Jan** (2.17M).
 - States with the most layoffs and discharges in 2025: **CA** (2.4M), **TX** (1.7M), **NY** (1.5M).
 - Notices of 1,000+ workers were **0.5%** of WARN notices but **12.8%** of the workers named in them.
 - Largest single WARN notice since 2023: **Tend Exchange Subsidiary LLC and Delaware Tender Staffing
 LLC** (nan, CA), **16,132** workers, May 2025.
+- Company with the most workers in WARN notices since 2023: **Tend Exchange Subsidiary LLC and Delaware Tender Staffing LLC**, **16,132** workers across 1 notices (CA).
+- Notices are filed most often on **Wed** (22%); only 1% on weekends. Layoffs most often take effect on **Fri** (26%).
+- Most common start dates in the month: **day 31** (9% of layoffs), then day 30 (9%) and day 1 (6%).
+- Busiest single day: **May 20, 2025** (Tuesday), 4 notices covering **16,364** workers.
 - Trend match with BLS (rank correlation, 1 = same direction every month): unemployment claims **0.28**, WARN **-0.34**.
 
 ### Charts
@@ -41,10 +49,37 @@ LLC** (nan, CA), **16,132** workers, May 2025.
 | 2025 | 12 | 21.24M | 1.77M |
 | 2026 | 9 | 15.41M | 1.71M |
 
+#### Monthly pattern
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/month_year_heatmap-dark.png">
+  <img alt="Layoffs by month and year heat grid" src="../docs/charts/month_year_heatmap-light.png">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/same_month_by_year-dark.png">
+  <img alt="Same month compared across years" src="../docs/charts/same_month_by_year-light.png">
+</picture>
+
+#### Do the sources agree?
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/sources_trend-dark.png">
   <img alt="Three sources indexed to 2023 = 100" src="../docs/charts/sources_trend-light.png">
 </picture>
+
+#### Compared with other trackers
+
+| Year | BLS JOLTS layoffs & discharges | DOL initial unemployment claims | Challenger announced job cuts | WARN workers (29 states) |
+|---|---|---|---|---|
+| 2023 | 19.85M | 11.39M | 722K | 217K |
+| 2024 | 20.01M | 11.38M | 761K | 219K |
+| 2025 | 21.24M | 11.56M | 1.21M | 234K |
+| 2026 | 15.41M (9 mo) | 8.81M (10 mo) | 617K (10 mo) | 224K (10 mo) |
+
+_(n mo) = months available so far. Challenger, Gray & Christmas figures are entered from their monthly reports (see `reference/challenger_job_cuts.csv` for each source link)._
+
+**Why the numbers differ:** BLS counts every layoff *and* firing, at every employer. DOL claims count people who **applied** for unemployment benefits. Challenger counts job cuts **announced** by companies (plans, which may happen later or not at all). WARN counts large layoffs that legally required advance notice. They measure different things, so the levels differ; what matters is whether they **rise and fall together**.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/top_states-dark.png">
@@ -144,9 +179,125 @@ LLC** (nan, CA), **16,132** workers, May 2025.
 | Large (250-999) | 540 | 5.6% | 245,242 | 27.4% |
 | Mega (1000+) | 46 | 0.5% | 113,986 | 12.8% |
 
+### Companies, dates and calendar patterns
+
+_From WARN notices only (29 states): the one source with exact dates and company names._
+
+#### Companies with the most layoffs
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/top_companies-dark.png">
+  <img alt="Top companies by workers in WARN notices" src="../docs/charts/top_companies-light.png">
+</picture>
+
+| Rank | Company | Workers | Notices | States | Latest notice |
+|---|---|---|---|---|---|
+| 1 | Tend Exchange Subsidiary LLC and Delaware Tender Staffing LLC | 16,132 | 1 | CA | May 20, 2025 |
+| 2 | Amazon | 13,211 | 88 | CA, NJ, NY, PA, WA | Nov 03, 2026 |
+| 3 | David's Bridal, LLC | 10,732 | 42 | AK, AL, CA, ME, NE, NJ, TX, WA, WI | Aug 26, 2023 |
+| 4 | Meta Platforms, Inc. | 8,775 | 84 | CA, NJ, WA | May 26, 2026 |
+| 5 | Walmart | 7,701 | 49 | AL, CA, IL, KS, MD, NJ, TX, WA, WI | Jun 23, 2026 |
+| 6 | Microsoft | 7,505 | 28 | CA, WA | Sep 22, 2026 |
+| 7 | Gebbers Farms, Etal | 6,910 | 2 | WA | Sep 25, 2026 |
+| 8 | Tesla, Inc. | 6,642 | 33 | CA, MD, TX | May 13, 2024 |
+| 9 | Dreyer's Grand Ice Cream | 5,349 | 12 | CA, MD | Oct 21, 2026 |
+| 10 | Yellow Corporation | 4,764 | 42 | AL, CA, KS, ME, WA, WI | Aug 18, 2023 |
+| 11 | Intel Corporation | 4,555 | 65 | AZ, CA, PA, TX | Oct 22, 2026 |
+| 12 | United States Cellular Corporation | 4,493 | 6 | CA, NE, TN, WA | Apr 17, 2025 |
+| 13 | Zachry Industrial, Inc.(Orange) | 4,410 | 4 | TX | Jun 03, 2024 |
+| 14 | The Boeing Company | 4,287 | 32 | AL, AZ, CA, PA, SC, WA | Apr 13, 2026 |
+| 15 | RaterLabs, Inc. | 3,657 | 1 | WA | Feb 06, 2024 |
+
+Full list: [docs/tables/top_companies.csv](../docs/tables/top_companies.csv)
+
+#### Day by day
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/recent_daily-dark.png">
+  <img alt="Workers in WARN notices each day, last 90 days" src="../docs/charts/recent_daily-light.png">
+</picture>
+
+**Latest notices**
+
+| Date | Company | City | State | Workers |
+|---|---|---|---|---|
+| Nov 04, 2026 | Alphia, Inc | nan | NE | 93 |
+| Nov 04, 2026 | Seattle Marriott Redmond | Redmond | WA | 91 |
+| Nov 04, 2026 | Crinetics Pharmaceuticals, Inc. | nan | CA | 78 |
+| Nov 04, 2026 | JVS SoCal | nan | CA | 63 |
+| Nov 04, 2026 | Ubs | Weehawken | NJ | 58 |
+| Nov 04, 2026 | ServiceNow, Inc. | nan | CA | 37 |
+| Nov 04, 2026 | Eclipse Advantage, LLC | nan | CA | 35 |
+| Nov 04, 2026 | Quince & Co, LLC | nan | CA | 34 |
+| Nov 04, 2026 | JVS SoCal | nan | CA | 33 |
+| Nov 04, 2026 | AES Corporation | nan | CA | 28 |
+| Nov 04, 2026 | ServiceNow, Inc. | nan | CA | 25 |
+| Nov 04, 2026 | Chick-fil-A - Hollins Group LLC - La Palma | nan | CA | 24 |
+| Nov 04, 2026 | Chick-fil-A - Hollins Group LLC - Orangethorpe | nan | CA | 14 |
+| Nov 04, 2026 | AES Corporation | nan | CA | 13 |
+| Nov 04, 2026 | City National Bank | nan | CA | 11 |
+
+Every day since 2023: [docs/tables/daily_notices.csv](../docs/tables/daily_notices.csv)
+
+#### Day of the week and date in the month
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/weekday_pattern-dark.png">
+  <img alt="Share of notices by weekday filed and effective" src="../docs/charts/weekday_pattern-light.png">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../docs/charts/day_of_month_pattern-dark.png">
+  <img alt="Share of layoffs by day of the month they take effect" src="../docs/charts/day_of_month_pattern-light.png">
+</picture>
+
+| Weekday | Notices filed | Share | Layoffs taking effect | Share |
+|---|---|---|---|---|
+| Mon | 1,573 | 17.7% | 1,837 | 20.5% |
+| Tue | 1,939 | 21.8% | 1,463 | 16.3% |
+| Wed | 1,970 | 22.1% | 844 | 9.4% |
+| Thu | 1,719 | 19.3% | 793 | 8.8% |
+| Fri | 1,660 | 18.6% | 2,366 | 26.4% |
+| Sat | 27 | 0.3% | 841 | 9.4% |
+| Sun | 24 | 0.3% | 834 | 9.3% |
+
+_Based on 8,912 notices with a filing date and 8,978 layoffs that have already taken effect._
+
+#### Month by month, with company names
+
+| Month | Notices | Workers | Different companies | Biggest companies that month (workers) |
+|---|---|---|---|---|
+| November 2026 | 53 | 2,745 | 32 | Davey Tree Surgery Company (Remote) (368); Amazon (189); Community Tree Service, LLC (163) |
+| October 2026 | 211 | 23,390 | 165 | Tyson Warehousing Services, LLC/Rochelle Distribution Center (2,495); Dreyer's Grand Ice Cream (2,346); AEG Management Oakland LLC (1,605) |
+| September 2026 | 270 | 29,418 | 192 | Gebbers Farms, Etal (3,445); Covenant Aviation Security (Hobby Airport) (1,279); Legendary Fruit Co (1,220) |
+| August 2026 | 236 | 19,184 | 176 | JBS Souderton (1,485); Borton & Sons, Inc. (928); 24Hr Homecare, LLC (738) |
+| July 2026 | 194 | 16,169 | 155 | Electrolux Consumer Products, Inc. (1,245); FreshRealm, Inc. (628); Microsoft (605) |
+| June 2026 | 251 | 17,604 | 166 | Lucid USA, Inc. (705); humano LLC (586); SIMOS Insourcing Solutions, LLC (572) |
+| May 2026 | 253 | 25,834 | 187 | Meta Platforms, Inc. (4,665); Spirit Airlines (IAH) May 2026 (959); Intuit Inc. (910) |
+| April 2026 | 320 | 23,603 | 228 | Amazon Fresh (983); Aramark Campus, LLC (972); Oracle America, Inc. (764) |
+| March 2026 | 272 | 17,422 | 175 | First Brands Group, LLC (904); KBR Services LLC (758); Oracle America, Inc. (475) |
+| February 2026 | 257 | 24,057 | 187 | Verizon (1,319); First Brands Group, LLC (907); Crothall and Morrison Healthcare (795) |
+| January 2026 | 294 | 27,235 | 234 | Amazon (3,680); Tyson Foods, Inc (Amarillo B-Shift Operations) Updated (1,761); Amazon Fresh (1,281) |
+| December 2025 | 110 | 10,888 | 89 | Blue Oval SK Group/Battery Plant (1,514); Novo Nordisk (811); Swift Beef Company (374) |
+
+All months: [docs/tables/monthly_notices_companies.csv](../docs/tables/monthly_notices_companies.csv)
+
+<details><summary>Workers in WARN notices, month × year</summary>
+
+| Year | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 2023 | 23,727 | 19,796 | 21,799 | 26,079 | 19,081 | 18,335 | 11,023 | 23,149 | 11,291 | 18,035 | 14,980 | 10,165 | 217,460 |
+| 2024 | 24,737 | 21,064 | 15,157 | 26,022 | 20,380 | 21,790 | 11,312 | 13,605 | 13,789 | 16,892 | 16,937 | 16,931 | 218,616 |
+| 2025 | 16,612 | 17,953 | 21,778 | 17,324 | 33,013 | 16,996 | 17,154 | 14,907 | 19,894 | 32,993 | 14,474 | 10,888 | 233,986 |
+| 2026 | 27,235 | 24,057 | 17,422 | 23,603 | 25,834 | 17,604 | 16,169 | 19,184 | 29,418 | 23,390 | 2,745 | – | 226,661 |
+
+</details>
+
 ### How to read this
 
 - **BLS JOLTS** counts every employer-initiated separation (layoffs *and* firings), all business sizes. State numbers are model-based estimates and are released once a year (each July).
 - **DOL claims** count people filing for unemployment. Not every laid-off worker files, so it's a trend signal.
 - **WARN notices** cover larger layoffs only (usually 50+ workers at employers with 100+ staff), from the 29 states whose data could be collected. Cities come from WARN only.
 - Sept and Oct 2025 BLS data were affected by the federal government shutdown.
+- **Company names** are grouped by removing legal endings (Inc, LLC, Corp), so the same company in different states adds up. Different divisions with different names (for example a subsidiary) still count separately.
+- **Dates:** a WARN notice is usually filed about 60 days before the layoff takes effect, so the "filed" and "takes effect" patterns differ on purpose.
